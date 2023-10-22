@@ -2,8 +2,7 @@ import { Resend } from "resend"
 import express from "express"
 import cors from "cors"
 const app = express()
-const port = 3000
-app.use(cors());
+const port = process.env.PORT ?? 8080;
 app.use(express.json());
 const resend = new Resend('re_TWojZGvg_DnzmLX99RzHeTKxKjgSp4Wez');
 
