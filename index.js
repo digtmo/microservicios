@@ -3,8 +3,10 @@ import express from "express"
 import cors from "cors"
 const app = express()
 const port = process.env.PORT ?? 8080;
-app.use(express.json());
 const resend = new Resend('re_TWojZGvg_DnzmLX99RzHeTKxKjgSp4Wez');
+
+app.use(express.json());
+app.use(cors())
 
 
  app.post('/v1/enviarcorreo', async (req, res) => {
